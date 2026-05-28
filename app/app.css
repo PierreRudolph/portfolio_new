@@ -1,11 +1,3 @@
-@import "tailwindcss";
-
-@theme {
-  --font-sans: ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-
 /* handjet-600 - latin */
 @font-face {
   font-display: swap;
@@ -35,7 +27,7 @@
   font-family: 'Roboto Mono';
   font-style: normal;
   font-weight: 400;
-  src: url('.assets/fonts/roboto-mono-v31-latin-regular.woff2') format('woff2');
+  src: url('./assets/fonts/roboto-mono-v31-latin-regular.woff2') format('woff2');
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -46,7 +38,7 @@
   font-family: 'Roboto Mono';
   font-style: normal;
   font-weight: 500;
-  src: url('.assets/fonts/roboto-mono-v31-latin-500.woff2') format('woff2');
+  src: url('./assets/fonts/roboto-mono-v31-latin-500.woff2') format('woff2');
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -57,12 +49,17 @@
   font-family: 'Roboto Mono';
   font-style: normal;
   font-weight: 600;
-  src: url('.assets/fonts/roboto-mono-v31-latin-600.woff2') format('woff2');
+  src: url('./assets/fonts/roboto-mono-v31-latin-600.woff2') format('woff2');
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+@import "tailwindcss";
 
-/* :root {
+
+@theme {
+  --font-display: "Roboto Mono", sans serif;
+  --font-handjet: "Handjet", sans serif;
+
   --color-red-500: oklch(63.7% .237 25.331);
   --color-red-600: oklch(57.7% .245 27.325);
   --color-orange-500: oklch(70.5% .213 47.604);
@@ -102,14 +99,14 @@
   --color-text-rgba: #1f293733;
   --color-switch: #dadfc9;
   --color-hover-switch: #c9cfb2;
-} */
+}
 
-:root{
-    --color-text-rgba: #1f293733;
+:root {
+  --color-dark-bg: #2f4858;
 }
 
 :root:where(.dark, .dark *) {
-  --color-bg: #2f4858;
+  /* --color-bg: #2f4858; */
   --color-text: #f3f4f6;
   --color-text-rgba: #f3f4f633;
   --color-switch: #007688;
@@ -120,13 +117,21 @@
   --color-terminal-prompt: #6eff9c;
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 html,
 body {
-
-
   font-size: 100%;
   font-family: 'Roboto Mono',
-  monospace;
+    monospace;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3.8em;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 3px;
 }
 
 .inset-shadow-card {
@@ -139,10 +144,6 @@ body {
 
 .main_page {
   outline: 3px red;
-}
-
-.bg-bg {
-  background-color: var(--color-bg);
 }
 
 /* Header */
@@ -158,7 +159,7 @@ header {
 .hover\:shadow-lg:hover {
   --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, #0000001a), 0 4px 6px -4px var(--tw-shadow-color, #0000001a);
   box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-}
+} 
 
 
 .header_content {
@@ -179,16 +180,6 @@ header {
   display: flex;
   align-items: center;
   gap: calc(var(--spacing) * 6);
-
-  a {
-    color: var(--color-text);
-    box-sizing: border-box;
-    border-bottom: 1px solid transparent;
-
-    &:hover {
-      border-bottom: 1px solid;
-    }
-  }
 }
 
 /* Header */
