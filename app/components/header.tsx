@@ -4,14 +4,14 @@ import { useState } from "react";
 
 export function Header() {
     return (
-        <header >
+        <header className="w-full border-b border-text-rgba sticky top-0 backdrop-blur-md">
             <div className="header_content">
                 <div>
                     <div>
                         <Logo></Logo>
                     </div>
                 </div>
-                <nav className="header_nav">
+                <nav className="header_nav dark:text-white">
                     <a className="transition_all" href="#">Über mich</a>
                     <a className="transition_all" href="#">Skills</a>
                     <a className="transition_all" href="#">Projekte</a>
