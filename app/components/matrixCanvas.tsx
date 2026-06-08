@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 
 export function MatrixCanvasEffect() {
   return (
-      <MatrixRain />
+    <MatrixRain />
   );
 }
 
@@ -26,7 +26,7 @@ function MatrixRain() {
       "url(../assets/fonts/roboto-mono-v31-latin-regular.woff2)"
     );
 
- 
+
 
     let animationFrameId = 0;
 
@@ -44,7 +44,12 @@ function MatrixRain() {
     let drops: number[] = [];
 
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
+      console.log(window.innerWidth);
+      if (window.innerWidth <= 1230) {
+        canvas.width = window.innerWidth;
+      } else {
+        canvas.width = 1230;
+      }
       canvas.height = 450;
 
       columns = Math.floor(canvas.width / fontSize);

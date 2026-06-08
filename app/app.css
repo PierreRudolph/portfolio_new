@@ -106,7 +106,7 @@
 }
 
 :root:where(.dark, .dark *) {
-  /* --color-bg: #2f4858; */
+   --color-bg: #2f4858; 
   --color-text: #f3f4f6;
   --color-text-rgba: #f3f4f633;
   --color-switch: #007688;
