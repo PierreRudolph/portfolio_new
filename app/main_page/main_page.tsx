@@ -6,6 +6,7 @@ import { Skills } from "~/components/skills";
 import { GatterBg } from "~/components/subComponents/gatter_bg";
 import { FloatingRects } from "~/components/subComponents/floating_rects";
 import { MyProjects } from "~/components/myProjects";
+import { Contact } from "~/components/contact";
 
 
 export function MainPage() {
@@ -22,7 +23,8 @@ export function MainPage() {
                     <Hero />
                     <AboutMe />
                     <Skills />
-                     <MyProjects /> 
+                    <MyProjects />
+                    <Contact />
                 </div>
             </main>
             <Footer />

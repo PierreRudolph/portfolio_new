@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export function Header() {
     return (
-        <header className="w-full border-b border-text-rgba sticky top-0 backdrop-blur-md">
+        <header className="w-full border-b border-text-rgba sticky top-0 backdrop-blur-md z-10">
             <div className="header_content">
                 <div>
                     <div>
@@ -30,7 +30,7 @@ function ButtonChangeTheme() {
 
     return (
         <button onClick={() => { changeColorTheme(), setActive(!active) }} className="p-2 rounded bg-switch hover:bg-hover-switch text-text flex items-center gap-2 transition-all hover:cursor-pointer inset-shadow-card shadow-md hover:shadow-lg">
-            {active ? <Sun></Sun> : <Moon></Moon>}
+            {active ? <Sun /> : <Moon />}
         </button>
     )
 }
