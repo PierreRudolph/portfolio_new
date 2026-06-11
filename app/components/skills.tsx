@@ -2,7 +2,7 @@
 export function Skills() {
     return (
         <section className="flex flex-col items-center gap-4 px-2 sm:px-0">
-            <h2 className="dark:text-white">{'<'}Meine Skills{'/>'}</h2>
+            <h2 className="text-orange-500 font-handjet font-semibold text-4xl">{'<'}Meine Skills{'/>'}</h2>
             <ul className="grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] gap-6 w-full">
                 {skills.map((skill) => (
                     <li key={skill.label} className="flex flex-col items-center gap-2 p-4 rounded shadow-md inset-shadow-card backdrop-blur-md hover:shadow-lg hover:scale-105 transition">
