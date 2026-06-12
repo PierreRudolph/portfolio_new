@@ -11,14 +11,21 @@ export function Header() {
                         <Logo></Logo>
                     </div>
                 </div>
-                <nav className="header_nav dark:text-white">
-                    <a className="transition_all" href="#">Über mich</a>
-                    <a className="transition_all" href="#">Skills</a>
-                    <a className="transition_all" href="#">Projekte</a>
-                    <a className="transition_all" href="#">Kontakt</a>
+                <nav className="hidden md:flex gap-6 dark:text-white">
+                    <a className="transition-all hover:border-b" href="#about">Über mich</a>
+                    <a className="transition-all hover:border-b" href="#skills">Skills</a>
+                    <a className="transition-all hover:border-b" href="#projects">Projekte</a>
+                    <a className="transition-all hover:border-b" href="#contact">Kontakt</a>
                 </nav>
-                <h3>Sprachenauswahl</h3>
-                <ButtonChangeTheme></ButtonChangeTheme>
+                <div className="hidden md:flex items-center gap-3">
+
+                    <nav>
+                        <button className="px-2 py-1 rounded text-sm font-medium transition hover:cursor-pointer hover:bg-hover-switch dark:text-white">EN</button>
+                        <button className="px-2 py-1 rounded text-sm font-medium transition hover:cursor-pointer hover:bg-hover-switch dark:text-white">DE</button>
+                    </nav>
+                    <ButtonChangeTheme></ButtonChangeTheme>
+                </div>
+
             </div>
 
         </header>

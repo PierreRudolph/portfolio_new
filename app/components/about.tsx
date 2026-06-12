@@ -2,7 +2,7 @@ import img from '../assets/img/foto-grau.jpg';
 
 export function AboutMe() {
     return (
-        <section className="flex w-full flex-col md:flex-row items-center justify-center gap-4 rounded inset-shadow-card backdrop-blur-md p-7">
+        <section id='about' className="flex w-full flex-col md:flex-row items-center justify-center gap-4 rounded inset-shadow-card backdrop-blur-md p-7">
             <Pic></Pic>
             <div className="max-w-lg flex flex-col items-center gap-4 dark:text-white">
                 <h2 className="font-handjet font-semibold text-4xl">{'<'}Über mich{'/>'}</h2>

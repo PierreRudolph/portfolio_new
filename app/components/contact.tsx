@@ -4,7 +4,7 @@ import githubLogo from "../assets/img/github-logo.svg"
 
 export function Contact() {
     return (
-        <section>
+        <section id="contact">
             <h2 className='text-orange-500 font-handjet font-semibold text-4xl'>{'<'}Kontakt aufnehmen{'/>'}</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-text-rgba border border-text-rgba w-full rounded shadow-md inset-shadow-card backdrop-blur-md">

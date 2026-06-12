@@ -124,6 +124,7 @@ body {
   font-size: 100%;
   font-family: 'Roboto Mono',
     monospace;
+    scroll-behavior: smooth;
 }
 
 h1 {
